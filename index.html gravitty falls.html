@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Falls - Guía de la ciudad</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background-color: #17251b;
+            color: #f4e8c1;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: linear-gradient(rgba(20, 35, 22, 0.75), rgba(20, 35, 22, 0.9)),
+                        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(10, 20, 12, 0.8);
+            text-align: center;
+        }
+
+        nav a {
+            color: #f6d66b;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        header h1 {
+            font-size: 80px;
+            color: #f6d66b;
+            text-shadow: 4px 4px #281b0d;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 25px;
+            max-width: 700px;
+            color: white;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background-color: #b83b2d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background-color: #8d2d22;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 70px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #f6d66b;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        /* IDENTIDAD */
+        .identidad {
+            background-color: #263b2b;
+        }
+
+        .datos {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .dato {
+            background-color: #16251b;
+            border: 2px solid #8d7331;
+            border-radius: 10px;
+            padding: 25px;
+            width: 230px;
+            text-align: center;
+        }
+
+        .dato h3 {
+            color: #f6d66b;
+            margin-bottom: 10px;
+        }
+
+        /* LUGARES */
+        .lugares {
+            background-color: #17251b;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tarjeta {
+            background-color: #263b2b;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #725d2a;
+            transition: transform 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-8px);
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .contenido {
+            padding: 20px;
+        }
+
+        .contenido h3 {
+            color: #f6d66b;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .contenido p {
+            line-height: 1.5;
+        }
+
+        /* ACTIVIDADES */
+        .actividades {
+            background-color: #263b2b;
+        }
+
+        .actividad {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #16251b;
+            border-left: 6px solid #b83b2d;
+            border-radius: 6px;
+        }
+
+        .actividad h3 {
+            color: #f6d66b;
+            margin-bottom: 8px;
+        }
+
+        /* EVENTOS */
+        .eventos {
+            background-color: #17251b;
+        }
+
+        .evento {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 25px;
+            background-color: #263b2b;
+            border-radius: 10px;
+            border: 1px solid #806a32;
+        }
+
+        .fecha {
+            color: #e65c4a;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* PIE */
+        footer {
+            background-color: #0d160f;
+            text-align: center;
+            padding: 30px;
+            color: #cfc49e;
+        }
+
+        footer strong {
+            color: #f6d66b;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 50px;
+            }
+
+            header p {
+                font-size: 19px;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#identidad">La ciudad</a>
+        <a href="#lugares">Lugares</a>
+        <a href="#actividades">Actividades</a>
+        <a href="#eventos">Eventos</a>
+    </nav>
+
+    <!-- INICIO -->
+    <header id="inicio">
+        <h1>GRAVITY FALLS</h1>
+        <p>
+            Un pequeño pueblo de Oregón donde los misterios,
+            criaturas extrañas y aventuras sobrenaturales
+            forman parte de la vida cotidiana.
+        </p>
+
+        <a href="#lugares" class="boton">EXPLORAR LA CIUDAD</a>
+    </header>
+
+    <!-- IDENTIDAD -->
+    <section class="identidad" id="identidad">
+
+        <h2>La identidad de Gravity Falls</h2>
+
+        <p class="intro">
+            Gravity Falls es un pueblo rodeado de bosques, montañas y
+            secretos inexplicables. Durante el verano, los hermanos
+            Dipper y Mabel Pines descubren que detrás de la tranquilidad
+            del pueblo existen fenómenos sobrenaturales, criaturas
+            misteriosas y numerosos enigmas.
+        </p>
+
+        <div class="datos">
+
+            <div class="dato">
+                <h3>🌲 Naturaleza</h3>
+                <p>Bosques profundos llenos de criaturas y misterios.</p>
+            </div>
+
+            <div class="dato">
+                <h3>🔮 Misterios</h3>
+                <p>Fenómenos paranormales y secretos ocultos.</p>
+            </div>
+
+            <div class="dato">
+                <h3>📖 Historia</h3>
+                <p>Una ciudad con una historia mucho más extraña de lo que parece.</p>
+            </div>
+
+            <div class="dato">
+                <h3>👁️ Aventuras</h3>
+                <p>Exploraciones y encuentros sobrenaturales en cada rincón.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LUGARES -->
+    <section class="lugares" id="lugares">
+
+        <h2>Lugares de interés</h2>
+
+        <p class="intro">
+            Descubrí algunos de los lugares más famosos y misteriosos
+            de Gravity Falls.
+        </p>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+                <img src="https://wallpapers.com/images/hd/return-of-cipher-gravity-falls-xyrgq38bbta4axmk.jpg"
+                     alt="Bosque">
+                <div class="contenido">
+                    <h3>El Bosque</h3>
+                    <p>
+                        Un enorme bosque que rodea Gravity Falls.
+                        Esconde criaturas, lugares secretos y fenómenos
+                        difíciles de explicar.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="https://vignette.wikia.nocookie.net/gravityfalls/images/c/cc/MysteryShack_MAINREF.jpg/revision/latest?cb=20131108010316&path-prefix=es"
+                     alt="Cabaña en el bosque">
+                <div class="contenido">
+                    <h3>La Cabaña del Misterio</h3>
+                    <p>
+                        La famosa atracción turística de Stan Pines.
+                        Un lugar lleno de objetos extraños y secretos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="https://i.pinimg.com/originals/e3/f4/0a/e3f40acff65049eb61f365854c5be317.png"
+                     alt="Lago">
+                <div class="contenido">
+                    <h3>Lago Gravity Falls</h3>
+                    <p>
+                        Un misterioso lago relacionado con algunas de
+                        las historias y criaturas más extrañas del pueblo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="https://i.pinimg.com/originals/37/6f/69/376f69dcde870a210cfc317b7a0929eb.png"
+                     alt="Montañas y bosque">
+                <div class="contenido">
+                    <h3>Las Montañas</h3>
+                    <p>
+                        Paisajes naturales ideales para explorar,
+                        aunque conviene no alejarse demasiado del camino.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ACTIVIDADES -->
+    <section class="actividades" id="actividades">
+
+        <h2>Actividades</h2>
+
+        <div class="actividad">
+            <h3>🔍 Búsqueda de misterios</h3>
+            <p>
+                Recorré el pueblo intentando descubrir símbolos,
+                pistas y secretos escondidos.
+            </p>
+        </div>
+
+        <div class="actividad">
+            <h3>🌲 Exploración del bosque</h3>
+            <p>
+                Caminá por los senderos del bosque y descubrí los
+                lugares más extraños de Gravity Falls.
+            </p>
+        </div>
+
+        <div class="actividad">
+            <h3>📕 Diario del misterio</h3>
+            <p>
+                Conocé las criaturas y fenómenos sobrenaturales
+                registrados en los misteriosos diarios.
+            </p>
+        </div>
+
+        <div class="actividad">
+            <h3>🎪 Visita a la Cabaña del Misterio</h3>
+            <p>
+                Disfrutá de una experiencia turística llena de
+                objetos extraños, rarezas y sorpresas.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="eventos" id="eventos">
+
+        <h2>Eventos destacados</h2>
+
+        <div class="evento">
+            <p class="fecha">🌕 Noche de Misterios</p>
+            <h3>Una noche en Gravity Falls</h3>
+            <p>
+                Una experiencia nocturna dedicada a las leyendas,
+                criaturas y secretos del pueblo.
+            </p>
+        </div>
+
+        <div class="evento">
+            <p class="fecha">🎃 Festival del Bosque</p>
+            <h3>Celebración de las criaturas</h3>
+            <p>
+                Un evento para conocer las historias y leyendas
+                de los habitantes sobrenaturales del bosque.
+            </p>
+        </div>
+
+        <div class="evento">
+            <p class="fecha">📖 Día del Misterio</p>
+            <h3>Descubrí los secretos del pueblo</h3>
+            <p>
+                Juegos, acertijos y desafíos inspirados en los
+                misterios de Gravity Falls.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>
+            <strong>Gravity Falls</strong> — Una ciudad donde nada es lo que parece.
+        </p>
+        <p>Proyecto web inspirado en la serie animada Gravity Falls.</p>
+    </footer>
+
+</body>
+</html>
