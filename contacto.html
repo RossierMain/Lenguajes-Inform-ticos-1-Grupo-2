@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto - Gravity Falls</title>
+
+    <style>
+
+        /* CONFIGURACIÓN GENERAL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background-color: #111329;
+            color: #eeeeee;
+            line-height: 1.6;
+        }
+
+
+        /* BARRA DE NAVEGACIÓN */
+        nav {
+            background-color: #080a1b;
+            padding: 18px;
+            text-align: center;
+            border-bottom: 2px solid #8d72c9;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #a9dff0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #a9dff0;
+        }
+
+
+        /* ENCABEZADO */
+        header {
+            min-height: 450px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+
+            background:
+                linear-gradient(
+                    rgba(9, 12, 38, 0.72),
+                    rgba(28, 18, 58, 0.96)
+                ),
+                url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            border-bottom: 3px solid #8d72c9;
+        }
+
+
+        header h1 {
+            font-size: 70px;
+
+            color: #a9dff0;
+
+            letter-spacing: 8px;
+
+            text-shadow:
+                4px 4px #17152c,
+                0 0 15px rgba(169, 223, 240, 0.4);
+
+            margin-bottom: 15px;
+        }
+
+
+        header p {
+            font-size: 22px;
+            color: #ffffff;
+            letter-spacing: 2px;
+            max-width: 700px;
+        }
+
+
+        /* SECCIÓN PRINCIPAL */
+        .contacto {
+            padding: 70px 8%;
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #29204a,
+                    #111329 60%
+                );
+        }
+
+
+        .contacto h2 {
+            color: #a9dff0;
+            font-size: 40px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+
+        .intro {
+            max-width: 850px;
+            margin: auto;
+
+            font-size: 18px;
+
+            color: #dedff0;
+
+            line-height: 1.8;
+        }
+
+
+        /* TARJETAS */
+        .datos-contacto {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 45px;
+        }
+
+
+        .dato {
+            width: 280px;
+            min-height: 210px;
+
+            padding: 30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #29274d,
+                    #181a36
+                );
+
+            border: 2px solid #7561a8;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.45);
+
+            transition:
+                transform 0.3s,
+                box-shadow 0.3s,
+                border-color 0.3s;
+        }
+
+
+        .dato:hover {
+            transform: translateY(-10px);
+
+            border-color: #a9dff0;
+
+            box-shadow:
+                0 12px 35px rgba(120, 91, 190, 0.35);
+        }
+
+
+        .dato h3 {
+            color: #a9dff0;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+
+        .dato p {
+            color: #e2e3ef;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+
+        .dato a {
+            color: #bca9ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        .dato a:hover {
+            color: #a9dff0;
+            text-decoration: underline;
+        }
+
+
+        /* HORARIOS */
+        .horarios {
+            max-width: 850px;
+
+            margin: 55px auto 0;
+
+            padding: 30px;
+
+            background-color: #1b1d3b;
+
+            border: 2px solid #7561a8;
+
+            border-radius: 15px;
+
+            text-align: left;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.35);
+        }
+
+
+        .horarios h2 {
+            text-align: center;
+
+            color: #a9dff0;
+
+            font-size: 29px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .horarios p {
+            margin: 10px 0;
+            color: #e2e3ef;
+        }
+
+
+        .horarios strong {
+            color: #bca9ff;
+        }
+
+
+        /* MENSAJE */
+        .mensaje {
+            max-width: 850px;
+
+            margin: 40px auto 0;
+
+            padding: 25px;
+
+            background-color: #272347;
+
+            border-left: 5px solid #a9dff0;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .mensaje p {
+            color: #eeeeee;
+            font-size: 17px;
+        }
+
+
+        /* BOTÓN */
+        .boton {
+            display: inline-block;
+
+            margin-top: 40px;
+
+            padding: 15px 32px;
+
+            background-color: #7048a8;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            border: 2px solid #9b78d0;
+
+            transition: 0.3s;
+        }
+
+
+        .boton:hover {
+            background-color: #553583;
+
+            border-color: #a9dff0;
+
+            transform: scale(1.05);
+        }
+
+
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #070817;
+
+            text-align: center;
+
+            padding: 35px;
+
+            color: #aaaec7;
+
+            border-top: 2px solid #7561a8;
+        }
+
+
+        footer p {
+            margin: 8px;
+        }
+
+
+        footer strong {
+            color: #a9dff0;
+        }
+
+
+        /* RESPONSIVE PARA CELULAR */
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px 5px;
+            }
+
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+                font-size: 14px;
+            }
+
+
+            header {
+                min-height: 350px;
+                padding: 25px;
+            }
+
+
+            header h1 {
+                font-size: 43px;
+                letter-spacing: 4px;
+            }
+
+
+            header p {
+                font-size: 17px;
+            }
+
+
+            .contacto {
+                padding: 50px 6%;
+            }
+
+
+            .contacto h2 {
+                font-size: 32px;
+            }
+
+
+            .intro {
+                font-size: 16px;
+            }
+
+
+            .dato {
+                width: 100%;
+            }
+
+
+            .horarios {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVEGACIÓN -->
+
+    <nav>
+
+        <a href="index.html">
+            Inicio
+        </a>
+
+        <a href="index.html#identidad">
+            La ciudad
+        </a>
+
+        <a href="index.html#lugares">
+            Lugares
+        </a>
+
+        <a href="index.html#actividades">
+            Actividades
+        </a>
+
+        <a href="index.html#eventos">
+            Eventos
+        </a>
+
+        <a href="contacto.html">
+            Contacto
+        </a>
+
+    </nav>
+
+
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <h1>
+            CONTACTO
+        </h1>
+
+        <p>
+            ✦ Oficina de Turismo de Gravity Falls ✦
+        </p>
+
+    </header>
+
+
+
+    <!-- INFORMACIÓN DE CONTACTO -->
+
+    <section class="contacto">
+
+        <h2>
+            Oficina de Turismo
+        </h2>
+
+
+        <p class="intro">
+
+            ¿Tenés alguna pregunta sobre Gravity Falls?
+
+            Comunicate con nuestra oficina de turismo para obtener
+            información sobre los lugares turísticos, actividades,
+            eventos y misterios de la ciudad.
+
+            Nuestro equipo está disponible para ayudarte a planificar
+            tu visita y descubrir todo lo que Gravity Falls tiene para ofrecer.
+
+        </p>
+
+
+
+        <!-- TARJETAS DE CONTACTO -->
+
+        <div class="datos-contacto">
+
+
+            <!-- DIRECCIÓN -->
+
+            <div class="dato">
+
+                <h3>
+                    📍 Dirección
+                </h3>
+
+                <p>
+
+                    Calle Mystery Shack 13
+                    <br>
+
+                    Gravity Falls, Oregon
+                    <br>
+
+                    Estados Unidos
+
+                </p>
+
+            </div>
+
+
+
+            <!-- TELÉFONO -->
+
+            <div class="dato">
+
+                <h3>
+                    📞 Teléfono
+                </h3>
+
+                <p>
+
+                    <a href="tel:+15415550123">
+
+                        +1 541-555-0123
+
+                    </a>
+
+                </p>
+
+                <p>
+                    Oficina de Turismo
+                </p>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="dato">
+
+                <h3>
+                    📧 Email
+                </h3>
+
+                <p>
+
+                    <a href="mailto:turismo@gravityfalls.com">
+
+                        turismo@gravityfalls.com
+
+                    </a>
+
+                </p>
+
+                <p>
+
+                    También podés escribirnos
+                    para realizar consultas.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- RED SOCIAL -->
+
+            <div class="dato">
+
+                <h3>
+                    👁️ Red Social
+                </h3>
+
+                <p>
+
+                    Seguinos en nuestra red social ficticia
+                    para conocer novedades y actividades.
+
+                </p>
+
+                <p>
+
+                    <a
+                        href="https://social.gravityfalls.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        Gravity Falls Social
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- HORARIOS -->
+
+        <div class="horarios">
+
+            <h2>
+                🕒 Horarios de atención
+            </h2>
+
+            <p>
+
+                <strong>
+                    Lunes a Viernes:
+                </strong>
+
+                09:00 - 18:00
+
+            </p>
+
+            <p>
+
+                <strong>
+                    Sábados:
+                </strong>
+
+                10:00 - 16:00
+
+            </p>
+
+            <p>
+
+                <strong>
+                    Domingos:
+                </strong>
+
+                Cerrado
+
+            </p>
+
+        </div>
+
+
+
+        <!-- MENSAJE -->
+
+        <div class="mensaje">
+
+            <p>
+
+                🔎
+
+                <strong>
+                    ¿Buscás información sobre algún lugar misterioso?
+                </strong>
+
+                <br><br>
+
+                No dudes en comunicarte con nosotros.
+                En Gravity Falls siempre hay algo nuevo
+                por descubrir.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- BOTÓN -->
+
+        <a
+            href="index.html"
+            class="boton"
+        >
+
+            ← VOLVER AL INICIO
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>
+
+            <strong>
+                Gravity Falls
+            </strong>
+
+            — Una ciudad donde nada es lo que parece.
+
+        </p>
+
+
+        <p>
+
+            Proyecto web inspirado en la serie animada Gravity Falls.
+
+        </p>
+
+
+        <p>
+
+            © 2026 Oficina de Turismo de Gravity Falls
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
