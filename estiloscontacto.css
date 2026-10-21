@@ -1,0 +1,257 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIABLES */
+:root {
+    --color-fondo: #111329;
+    --color-texto: #eeeeee;
+    --color-acento: #a9dff0;
+    --color-secundario: #8d72c9;
+    --color-header: #080a1b;
+    --color-footer: #070817;
+    --color-tarjetas: #29274d;
+    --color-borde: #7561a8;
+    --color-texto-secundario: #dedff0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* TÍTULOS GENERALES */
+h1 {
+    color: var(--color-acento);
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--color-acento);
+    font-size: 32px;
+}
+
+h3 {
+    color: var(--color-secundario);
+    font-size: 24px;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: var(--color-header);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* NAVEGACIÓN */
+nav {
+    background-color: var(--color-header);
+    padding: 18px 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--color-texto);
+    text-decoration: underline;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: var(--color-footer);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* ===== CONTACTO: SECCIÓN PRINCIPAL ===== */
+
+.contacto {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 8%;
+    text-align: center;
+    background: radial-gradient(
+        circle at top,
+        #29204a,
+        var(--color-fondo) 60%
+    );
+}
+
+.contacto h2 {
+    color: var(--color-acento);
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.intro {
+    max-width: 850px;
+    margin: auto;
+    font-size: 18px;
+    color: var(--color-texto-secundario);
+    line-height: 1.8;
+}
+
+/* ===== TARJETAS DE CONTACTO ===== */
+
+.datos-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 45px;
+}
+
+.dato {
+    width: 280px;
+    min-height: 210px;
+    padding: 30px;
+    background: linear-gradient(145deg, #29274d, #181a36);
+    border: 2px solid var(--color-borde);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.dato:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-acento);
+    box-shadow: 0 12px 35px rgba(120, 91, 190, 0.35);
+}
+
+.dato h3 {
+    color: var(--color-acento);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.dato p {
+    color: var(--color-texto-secundario);
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.dato a {
+    color: #bca9ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dato a:hover {
+    color: #a9dff0;
+    text-decoration: underline;
+}
+
+/* ===== HORARIOS ===== */
+
+.horarios {
+    max-width: 850px;
+    margin: 55px auto 0;
+    padding: 30px;
+    background-color: #1b1d3b;
+    border: 2px solid var(--color-borde);
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.horarios h2 {
+    text-align: center;
+    color: var(--color-acento);
+    font-size: 29px;
+    margin-bottom: 20px;
+}
+
+.horarios p {
+    margin: 10px 0;
+    color: var(--color-texto-secundario);
+}
+
+.horarios strong {
+    color: #bca9ff;
+}
+
+/* ===== MENSAJE ===== */
+
+.mensaje {
+    max-width: 850px;
+    margin: 40px auto 0;
+    padding: 25px;
+    background-color: #272347;
+    border-left: 5px solid var(--color-acento);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mensaje p {
+    color: #eeeeee;
+    font-size: 17px;
+}
+
+/* ===== BOTÓN VOLVER AL INICIO ===== */
+
+.boton {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 32px;
+    background-color: #7048a8;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid #9b78d0;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #553583;
+    border-color: #a9dff0;
+    transform: scale(1.05);
+}
+
+/* ===== ADAPTACIÓN DE CONTACTO A PANTALLAS PEQUEÑAS ===== */
+
+@media (max-width: 700px) {
+    .contacto {
+        padding: 50px 6%;
+    }
+
+    .contacto h2 {
+        font-size: 32px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .dato {
+        width: 100%;
+    }
+
+    .horarios {
+        padding: 22px;
+    }
+}
