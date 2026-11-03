@@ -29,6 +29,12 @@ body {
     padding: 0 20px;
 }
 
+/* ESPACIADO DE MAIN */
+main {
+    margin: 0 auto;
+    padding: 20px;
+}
+
 /* TÍTULOS GENERALES */
 h1 {
     color: var(--color-acento);
