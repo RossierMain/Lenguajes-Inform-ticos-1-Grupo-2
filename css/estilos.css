@@ -28,6 +28,8 @@ body{
 }
 header{
     background-color: var(--color-seccion);
+    padding: 70px 20px;
+    text-align: center;
 }
 footer{
     background-color: var(--color-footer);
