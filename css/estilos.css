@@ -27,9 +27,9 @@ body{
     color: var(--color-texto);
 }
 header{
-    background-color: var(--color-seccion);
-    padding: 70px 20px;
     text-align: center;
+    position:sticky;
+    top: 0;
 }
 footer{
     background-color: var(--color-footer);
@@ -47,13 +47,19 @@ h3{
     font-size: 1.5rem;
      margin-bottom: 10px;
 }
+#inicio {
+    background-color: var(--color-seccion);
+    text-align: center;
+    padding: 70px 20px;
+}
+
 /* NAVEGACIÓN */
 
 nav {
     background-color: var(--color-footer);
     padding: 18px;
     text-align: center;
-    position:sticky;
+    
 }
 
 nav a {
