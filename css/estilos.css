@@ -133,6 +133,7 @@ section p {
     background-color: var(--color-tarjeta);
     border-radius: 8px;
     overflow: hidden;
+    padding: 1rem;
 }
 
 .tarjeta img {
@@ -140,6 +141,17 @@ section p {
     height: 230px;
     object-fit: cover;
     display: block;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    background-color: var(--color-tarjeta);
+}
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    gap:10px
 }
 
 .contenido {
