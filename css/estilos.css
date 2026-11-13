@@ -272,8 +272,8 @@ footer p {
     text-align: center;
     background: radial-gradient(
         circle at top,
-        #29204a,
-        var(--color-fondo) 60%
+        var(--color-seccion),
+        #3f6347 60%
     );
 }
 
@@ -312,7 +312,7 @@ p {
     width: 280px;
     min-height: 210px;
     padding: 30px;
-    background: linear-gradient(145deg, #29274d, #181a36);
+    background-color: var(--color-tarjeta);
     border: 2px solid var(--color-borde);
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
@@ -354,7 +354,7 @@ p {
     max-width: 850px;
     margin: 55px auto 0;
     padding: 30px;
-    background-color: #1b1d3b;
+    background-color: var(--color-tarjeta);
     border: 2px solid var(--color-borde);
     border-radius: 15px;
     text-align: left;
@@ -383,7 +383,7 @@ p {
     max-width: 850px;
     margin: 40px auto 0;
     padding: 25px;
-    background-color: #272347;
+    background-color: var(--color-tarjeta);
     border-left: 5px solid var(--color-acento);
     border-radius: 8px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
