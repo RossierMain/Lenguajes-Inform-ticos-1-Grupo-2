@@ -17,8 +17,8 @@
 }
 /*Body, Header y Footer*/
 body{
-    font-family:'Roboto',san-serif;
-    font-size: 1rem;
+    font-family:san-serif;
+    font-size: 1.4rem;
     line-height: 1.5;
     background-color: var(--color-fondo);
     max-width: 1100px;
@@ -27,9 +27,11 @@ body{
     color: var(--color-texto);
 }
 header{
+    width: 100%;
     text-align: center;
     position:sticky;
     top: 0;
+    box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.45);
 }
 footer{
     background-color: var(--color-footer);
@@ -44,13 +46,20 @@ h2{
 }
 h3{
     color:var(--color-acento);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
      margin-bottom: 10px;
+}
+p{
+    font-size: 1.4rem;
 }
 #inicio {
     background-color: var(--color-seccion);
     text-align: center;
     padding: 70px 20px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-image: url(../img/banner.avif);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* NAVEGACIÓN */
@@ -59,20 +68,32 @@ nav {
     background-color: var(--color-footer);
     padding: 18px;
     text-align: center;
-    
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex: 1 1 px;
 }
 
-nav a {
+.linkNav{
     color: var(--color-acento);
     text-decoration: none;
     margin: 0 12px;
     font-weight: bold;
-    font-size:1rem;
+    font-size:1.5rem;
 }
-
+.navbar-toggler {
+  border-color: #f6d66b !important;
+}
+.navbar-toggler-icon {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(24%) saturate(915%) hue-rotate(355deg) brightness(101%) contrast(93%);
+}
 nav a:hover {
     color: var(--color-secundario);
 }
+.logo{
+    width: 7rem;
+}
+
 /* BOTÓN PRINCIPAL */
 
 .boton {
@@ -92,6 +113,9 @@ nav a:hover {
 
 /* SECCIONES PRINCIPALES */
 
+#inicio{
+    font-size: 1.5rem;
+}
 main {
     max-width: 1100px;
     margin: 0 auto;
@@ -144,20 +168,23 @@ section p {
 
 .tarjeta img {
     width: 100%;
-    height: 230px;
+    height: 30rem;
     object-fit: cover;
     display: block;
+    
 }
 .info{
     display: flex;
     flex-direction: column;
     gap:20px;
     background-color: var(--color-tarjeta);
+    flex: 1 1 px;
 }
 .descripcion{
     display: flex;
     flex-direction: column;
-    gap:10px
+    gap:10px;
+    flex: 1 1 px;
 }
 
 .contenido {
@@ -185,6 +212,21 @@ section p {
 .fecha {
     color: var(--color-acento);
     font-weight: bold;
+}
+
+/* DESCRIPCIONES */
+dl {
+  margin: 1rem 0;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+dd {
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* PIE DE PÁGINA */
