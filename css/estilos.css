@@ -14,10 +14,13 @@
     --color-titulo:#fdf9ea;
     --color-texto: #f4e8c1;
     --color-footer: #0d160f;
+    --color-borde: #f6d66b;
+    --color-texto-secundario: #f4e8c1;
+    --color-tarjetas: #16251b;
 }
 /*Body, Header y Footer*/
 body{
-    font-family:san-serif;
+    font-family: sans-serif;
     font-size: 1.4rem;
     line-height: 1.5;
     background-color: var(--color-fondo);
@@ -69,8 +72,6 @@ nav {
     background-color: var(--color-footer);
     padding: 18px;
     text-align: center;
-    display: flex;
-    justify-content: space-evenly;
     gap: 2rem;
     flex: 1 1 px;
 }
@@ -477,7 +478,7 @@ input:focus, textarea:focus, select:focus {
 textarea {
     min-height: 120px;
     resize: vertical;
-
+}
 
 /* =========================================
    PERSONALIZACIÓN DE BOOTSTRAP
