@@ -14,10 +14,13 @@
     --color-titulo:#fdf9ea;
     --color-texto: #f4e8c1;
     --color-footer: #0d160f;
+    --color-borde: #f6d66b;
+    --color-texto-secundario: #f4e8c1;
+    --color-tarjetas: #16251b;
 }
 /*Body, Header y Footer*/
 body{
-    font-family:san-serif;
+    font-family: sans-serif;
     font-size: 1.4rem;
     line-height: 1.5;
     background-color: var(--color-fondo);
@@ -69,8 +72,6 @@ nav {
     background-color: var(--color-footer);
     padding: 18px;
     text-align: center;
-    display: flex;
-    justify-content: space-evenly;
     gap: 2rem;
     flex: 1 1 px;
 }
@@ -480,3 +481,104 @@ textarea {
     min-height: 120px;
     resize: vertical;
 }
+
+/* =========================================
+   PERSONALIZACIÓN DE BOOTSTRAP
+   ========================================= */
+
+/* COLORES DE BOOTSTRAP */
+:root {
+    --bs-primary: #263b2b;
+    --bs-primary-rgb: 38, 59, 43;
+
+    --bs-secondary: #b83b2d;
+    --bs-secondary-rgb: 184, 59, 45;
+
+    --bs-success: #17251b;
+    --bs-warning: #f6d66b;
+
+    --bs-body-bg: #17251b;
+    --bs-body-color: #f4e8c1;
+    --bs-border-color: #f6d66b;
+}
+
+/* TIPOGRAFÍA */
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* BOTONES BOOTSTRAP */
+.btn-primary {
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
+    color: var(--color-fondo);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: var(--color-texto);
+    transform: translateY(-3px);
+}
+
+/* NAVEGACIÓN BOOTSTRAP */
+.navbar {
+    background-color: var(--color-footer) !important;
+}
+
+.navbar .nav-link {
+    color: var(--color-acento);
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-secundario);
+}
+
+/* TARJETAS BOOTSTRAP */
+.card {
+    background-color: var(--color-tarjeta);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* FORMULARIOS BOOTSTRAP */
+.form-control,
+.form-select {
+    background-color: var(--color-tarjeta);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--color-tarjeta);
+    color: var(--color-texto);
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 0.25rem rgba(246, 214, 107, 0.25);
+}
+
+/* TABLAS BOOTSTRAP */
+.table {
+    color: var(--color-texto);
+    border-color: var(--color-borde);
+}
+
+/* TRANSICIONES */
+.btn,
+.card,
+.nav-link,
+.form-control,
+.form-select {
+    transition: all 0.3s ease;
+}
+
+
