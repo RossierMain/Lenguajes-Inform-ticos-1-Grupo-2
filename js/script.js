@@ -23,3 +23,19 @@ buscador.addEventListener("input",() => {
     })
     sinResultados.classList.toggle("d-none", encontrados > 0);
 } )
+/* MOSTRAR Y OCULTAR CONTENIDO */
+
+const boton = document.getElementById("botonHistoria");
+const contenido = document.getElementById("masHistoria");
+
+boton.addEventListener("click", function() {
+
+    if (contenido.style.display === "none") {
+        contenido.style.display = "block";
+        boton.textContent = "Ver menos";
+    } else {
+        contenido.style.display = "none";
+        boton.textContent = "Ver más";
+    }
+
+});
