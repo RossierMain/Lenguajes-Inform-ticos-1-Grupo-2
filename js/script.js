@@ -51,16 +51,4 @@ botonModo.addEventListener("click", function() {
     } else {
         botonModo.textContent = "Modo oscuro";
     }
-});/* MODO OSCURO */
-
-const botonModo = document.getElementById("modoOscuro");
-
-botonModo.addEventListener("click", function() {
-    document.body.classList.toggle("modo-oscuro");
-
-    if (document.body.classList.contains("modo-oscuro")) {
-        botonModo.textContent = "Modo claro";
-    } else {
-        botonModo.textContent = "Modo oscuro";
-    }
 });
