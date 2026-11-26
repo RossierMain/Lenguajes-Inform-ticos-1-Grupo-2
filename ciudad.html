@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gravity Falls - La ciudad</title>
+    <title>La ciudad-Gravity Falls</title>
 
     <!-- Fuente de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,37 +14,38 @@
       rel="stylesheet">
     <!-- Hoja de estilos externa -->
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" type="img/webp" href="img/favicon.webp">
 </head>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
         
-        <!-- logo -->
-        <a class="navbar-brand" href="index.html">
-            <img src="img/Gravity_Falls_logo.svg.webp" class="logo" alt="Logo Gravity Falls" title="Gravity Falls">
-        </a>
+          <!-- logo -->
+          <a class="navbar-brand" href="index.html">
+              <img src="img/Gravity_Falls_logo.webp" class="logo" alt="Logo Gravity Falls" title="Gravity Falls">
+          </a>
 
-        <!-- Botón hamburguesa -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuGravity" aria-controls="menuGravity" aria-expanded="false" aria-label="Abrir menú">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+          <!-- Botón hamburguesa -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuGravity" aria-controls="menuGravity" aria-expanded="false" aria-label="Abrir menú">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- Contenedor colapsable-->
-        <div class="collapse navbar-collapse" id="menuGravity">
-            <div class="navbar-nav ms-auto">
-            <a href="index.html" class="nav-item nav-link linkNav">Inicio</a>
-            <a href="ciudad.html" class="nav-item nav-link linkNav">Ciudad</a>
-            <a href="lugares.html" class="nav-item nav-link linkNav">Lugares</a>
-            <a href="contacto.html" class="nav-item nav-link linkNav">Contacto</a>
-            </div>
-        </div>
+          <!-- Contenedor colapsable-->
+          <div class="collapse navbar-collapse" id="menuGravity">
+              <div class="navbar-nav ms-auto">
+                <a href="index.html" class="nav-item nav-link linkNav">Inicio</a>
+                <a href="ciudad.html" class="nav-item nav-link linkNav">Ciudad</a>
+                <a href="lugares.html" class="nav-item nav-link linkNav">Lugares</a>
+                <a href="misterios.html" class="nav-item nav-link linkNav">Misterios</a>
+                <a href="contacto.html" class="nav-item nav-link linkNav">Contacto</a>
+              </div>
+          </div>
         </div>
     </nav>
   </header>
   <main>
-          <!-- INICIO -->
+    <!-- INICIO -->
     <div id="inicio">
         <h1>LA CIUDAD</h1>
         <p>
@@ -74,29 +75,84 @@
           <li><strong>Bosques del Este:</strong> Rutas de senderismo llenas de sorpresas.</li>
         </ul>
     </section>
-    <section id="costumbres">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Primera imagen"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Segunda imagen"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Tercera imagen"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="img/fondo_GravityFalls1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/fondo_GravityFalls2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/fondo_GravityFalls3.webp" alt="Third slide">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+    <section id="costumbres" class="border shadow-sm">
       <h2>Tradiciones Únicas</h2>
       <p>Disfruta de festividades exclusivas como Summerween cada 22 de junio o nuestra colorida Feria Anual.</p>
     </section>
     <section id="datos-clave">
       <h2>Datos Clave del Pueblo</h2>
-      <dl>
-        <dt><strong>Año de Fundación</strong></dt>
-        <dd>1842</dd>
-        <dt><strong>Fundador Real</strong></dt>
-        <dd>Quentin Trembley</dd>
-        <dt><strong>Ubicación</strong></dt>
-        <dd>Condado de Roadkill, Oregón, EE. UU.</dd>
-        <dt><strong>Población Ficticia</strong></dt>
-        <dd>Aproximadamente 1,300 habitantes</dd>
-        <dt><strong>Gentilicio</strong></dt>
-        <dd>Gravityfallense / Gravitense</dd>
-        <dt><strong>Clima</strong></dt>
-        <dd>Templado oceánico / Boscoso húmedo</dd>
-        <dt><strong>Lema Local</strong></dt>
-        <dd>"Mantén la curiosidad"</dd>
-      </dl>
+          <dl class="mb-0">
+            <dt><strong>Año de Fundación</strong></dt>
+            <dd>1842</dd>
+            <dt><strong>Fundador</strong>
+            </dt>
+            <dd>
+              Nathaniel Northwest
+              <figure class="figure d-block mt-2 mb-3">
+                <img class="figure-img img-thumbnail shadow-sm mb-1" 
+                    src="img/fundador.jpg" 
+                    title="Nathaniel Northwest" 
+                    alt="Nathaniel Noroeste">
+              </figure>
+            </dd>
+            <dt><strong>Población Ficticia</strong></dt>
+            <dd>Aproximadamente 1,300 habitantes</dd>
+            <dt><strong>Gentilicio</strong></dt>
+            <dd>Gravityfallense / Gravitense</dd>
+            <dt><strong>Clima</strong></dt>
+            <dd>Templado oceánico / Boscoso húmedo</dd>
+            <dt><strong>Lema Local</strong></dt>
+            <dd>"Mantén la curiosidad"</dd>
+            <dt><strong>Ubicación</strong></dt>
+            <dd>Condado de Roadkill, Oregón, EE. UU.</dd>
+            <img class="d-block w-100 img-thumbnail shadow-sm" 
+                src="img/mapa_info.webp" 
+                title="Mapa de Oregon" 
+                alt="info-mapa">
+          </dl>
     </section>
   </main>
+  <footer>
+    <p>
+        <strong>
+            Gravity Falls
+        </strong>
+        — Una ciudad donde nada es lo que parece.
+    </p>
+    <p>
+        Proyecto web inspirado en la serie animada Gravity Falls.
+    </p>
+    <p>
+        © 2026 Oficina de Turismo de Gravity Falls
+    </p>      
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
